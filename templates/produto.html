@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% include 'menu.html' %}
+
+    <h2>Produto Django</h2>
+
+    <p>
+        {{ produto }}
+    </p>
+    <hr>
+    {% for p in products %}
+    
+   	<p>
+		{{ p }} {{p.price}}
+	</p>
+    {% endfor %}
+  
+</body>
+</html>

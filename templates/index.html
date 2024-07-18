@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+    {% include 'menu.html' %}
+    <div class="container">
+        
+        <h2>Home Django</h2>
+
+        <hr>
+
+        <h2>{{curses}}</h2>
+
+        <hr>
+
+        <h2>Linguagens de Programação</h2>
+
+        {{languages}}
+        <hr>
+
+        1 valor da lista:<b>{{languages.1}}</b>
+        <hr>
+
+        <ul>
+            {% for language in languages %}
+            <li>{{language}}</li>
+            {% endfor %}
+        </ul>
+
+        <hr>
+
+        <h2>Noticias</h2>
+        {%for new in news%}
+
+        <div class="noticia">
+            <h3>{{new.title}}</h3>
+            <h4>{{new.subtitle}}</h4>
+            <p>{{new.text}}</p>
+        </div>
+        {% endfor %}
+      
+    </div>
+
+</body>
+
+</html>
