@@ -1,21 +1,3 @@
-{% load static %}
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <title>Document</title>
-
-    <link rel="stylesheet" href="{% static 'bootstrap5/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-</head>
-
-<body>
-
     <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: black;">
         <div class="container-fluid">
             <h1 style="color:black ;">DJANGO</h1>
@@ -34,6 +16,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'produto' %}">Produto</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+                    </li>
                  
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'contato' %}">Contato</a>
@@ -43,7 +28,3 @@
             </div>
         </div>
     </nav>
-
-</body>
-
-</html>

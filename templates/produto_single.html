@@ -1,24 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+{% extends '_main.html' %}
+{% load static %}
+{% block content %}
+<h2>
+    {{ product.name }}
+</h2>
 
-</head>
-<body>
+<p>
+    R$ {{ product.price|floatformat:2 }}
+</p>
 
-    <h2>
-        {{ product.name }}
-    </h2>
-    
-    <p>
-        R$ {{ product.price|floatformat:2 }}
-    </p>
-    
-    <p>
-        Estoque: {{ product.stock }}
-    </p>
-     
-</body>
-</html>
+<p>
+    Estoque: {{ product.stock }}
+</p>
+
+{% endblock %}

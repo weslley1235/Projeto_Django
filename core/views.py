@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from core.models import Products
+from core.models import Products, Blog
 from django.shortcuts import render, get_object_or_404
+
 # Create your views here.
 def index (request):
     context = {
@@ -37,6 +38,20 @@ def produto(request):
 
 def contato (request):
     return render(request, 'contato.html')
+
+def blog(request):
+    blog = Blog.objects.all()
+    
+    data = {
+        'blog': blog,
+        'title': 'Blog Django'
+    }
+    return render(request, 'blog.html', data)
+
+#pagina single do blog com slug,url amigavel
+def blog_single(request, slug):
+    blog = get_object_or_404(Blog, slug=slug)
+    return render(request, 'blog_single.html', {'blog': blog})
 
 def produto_single(request, id):
     product = get_object_or_404(Products, id=id) # get_object_or_404(Products, id=id) -> Usado para recuperar um único objeto com base em um critério específico, como um ID único.
