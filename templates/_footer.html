@@ -1,5 +1,5 @@
 {% load static %}
-    
+
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-section about">
@@ -9,24 +9,40 @@
                 até o desenvolvimento completo de projetos web
             </p>
         </div>
-        <div class="footer-section links">
-            <h3>Links Rápidos</h3>
+
+        <div class="footer-section contato">
+            <h3>Contato</h3>
+
             <ul>
-                <li><a href="{% url 'index' %}">Home</a></li>
-                <li><a href="{% url 'produto' %}">Produtos</a></li>
-                <li><a href="{% url 'blog' %}">Blog</a></li>
-                <li><a href="{% url 'contato' %}">Contato</a></li>
+                <li><i class="bi bi-geo-alt"></i> 1415 Obebez Loop</li>
+                <li><i class="bi bi-envelope"></i> zazu@cewzu.sh </li>
+                <li><i class="bi bi-telephone"></i> (377) 546-1044</li>
+                <li><i class="bi bi-telephone"></i> (206) 579-9197</li>
             </ul>
         </div>
+
         <div class="footer-section social">
             <h3>Redes Sociais</h3>
-            <a href="#" class="social-icon"> <i class="bi bi-facebook"></i> </a>
-            <a href="#" class="social-icon"> <i class="bi bi-instagram"></i> </a>
+            <a href="" class="social-icon"> <i class="bi bi-facebook" style="color: rgb(26, 114, 187);"></i> </a>
+            <a href="" class="social-icon"> <i class="bi bi-instagram" style="color: rgb(226, 120, 169);"></i> </a>
+            <a href="" class="social-icon"> <i class="bi bi-linkedin" style="color: rgb(54, 154, 212);"></i> </a>
+            <a href="" class="social-icon"> <i class="bi bi-github" style="color:rgb(255, 255, 255);"></i> </a>
         </div>
+
+        <div class="footer-section mapa">
+            <h3>Localização</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.7072378075068!2d-45.195029623829086!3d-22.813309479320964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ccc45681df6299%3A0xdafd98a36d707d9b!2sSenac%20Guaratinguet%C3%A1!5e0!3m2!1spt-BR!2sbr!4v1722298365177!5m2!1spt-BR!2sbr"
+                width="200" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; {% now "Y" %} - Projeto Web Django. Todos os direitos reservados.</p>
+        </div>
+
     </div>
-    <div class="footer-bottom">
-        <p>&copy; {% now "Y" %} - Projeto Web Django. Todos os direitos reservados.</p>
-    </div>
+
 </footer>
 
 </body>

@@ -11,7 +11,7 @@ urlpatterns = [
     path('blog', blog, name='blog'),
     path('contato', contato, name='contato'),
     path('produto/<int:id>/', produto_single, name='produto_single'),
-    path('blog/<slug:slug>/', blog_single, name='blog_single')
+    path('blog/<slug:slug>/', blog_single, name='blog_single'),
 ]
 
 # acima o "path('', index)" indica que quando acessar a raiz do site será chamado a view index

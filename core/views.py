@@ -56,3 +56,4 @@ def blog_single(request, slug):
 def produto_single(request, id):
     product = get_object_or_404(Products, id=id) # get_object_or_404(Products, id=id) -> Usado para recuperar um único objeto com base em um critério específico, como um ID único.
     return render(request, 'produto_single.html', {'product': product})
+
